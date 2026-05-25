@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python 思维导图</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;background:#0a0a1a;color:#e0e0f0;min-height:100vh;padding:40px 20px}
+  .container{max-width:900px;margin:0 auto}
+  .hero{text-align:center;margin-bottom:50px}
+  .hero h1{font-size:2.5rem;background:linear-gradient(135deg,#7ee8fa,#c89eff,#ff9ec4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:12px}
+  .hero p{color:#8888aa;font-size:1rem;line-height:1.7}
+  .badge{display:inline-block;background:linear-gradient(135deg,#7ee8fa,#c89eff);color:#0a0a1a;padding:4px 16px;border-radius:20px;font-size:.8rem;font-weight:700;margin-top:12px}
+  .chapter{margin-bottom:40px}
+  .chapter-title{display:flex;align-items:center;gap:10px;margin-bottom:16px;padding-bottom:8px;border-bottom:1px solid rgba(200,158,255,.15)}
+  .chapter-num{background:rgba(200,158,255,.12);border:1px solid rgba(200,158,255,.3);color:#c89eff;font-size:.7rem;padding:3px 10px;border-radius:10px}
+  .chapter-name{font-size:1rem;font-weight:700}
+  .card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+  .card{background:rgba(20,20,50,.8);border:1px solid rgba(200,158,255,.12);border-radius:14px;padding:16px 18px;color:#e0e0f0;text-decoration:none;transition:border-color .2s,transform .15s,box-shadow .2s;display:block}
+  .card:hover{border-color:rgba(200,158,255,.45);transform:translateY(-2px);box-shadow:0 8px 24px rgba(200,158,255,.1)}
+  .card-title{font-size:.95rem;font-weight:600;margin-bottom:4px}
+  .card-sub{font-size:.72rem;color:#8888aa}
+  .card-tag{display:inline-block;background:rgba(126,232,250,.08);border:1px solid rgba(126,232,250,.2);color:#7ee8fa;font-size:.6rem;padding:2px 8px;border-radius:8px;margin-top:8px}
+  .card.empty{opacity:.4;cursor:default}
+  .card.empty:hover{border-color:rgba(200,158,255,.12);transform:none;box-shadow:none}
+  footer{text-align:center;margin-top:60px;padding-top:30px;border-top:1px solid rgba(200,158,255,.1);color:#5555778;font-size:.78rem}
+  footer a{color:#c89eff;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="hero">
+    <h1>Python 思维导图</h1>
+    <p>按逻辑章节整理 · markmap 生成 · GitHub Pages 托管</p>
+    <span class="badge">持续更新</span>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-title">
+      <span class="chapter-num">CHAPTER 01</span>
+      <span class="chapter-name">Python 基础</span>
+    </div>
+    <div class="card-grid">
+      <a class="card" href="集合.html">
+        <div class="card-title">集合 Set</div>
+        <div class="card-sub">无序不重复元素序列</div>
+        <span class="card-tag">基础</span>
+      </a>
+      <a class="card" href="函数.html">
+        <div class="card-title">函数定义与调用</div>
+        <div class="card-sub">def、参数、返回值</div>
+        <span class="card-tag">基础</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-title">
+      <span class="chapter-num">CHAPTER 02</span>
+      <span class="chapter-name">数据类型</span>
+    </div>
+    <div class="card-grid">
+      <span class="card empty"><div class="card-title">字符串 String</div><div class="card-sub">待更新</div></span>
+      <span class="card empty"><div class="card-title">列表 List</div><div class="card-sub">待更新</div></span>
+      <span class="card empty"><div class="card-title">元组 Tuple</div><div class="card-sub">待更新</div></span>
+      <span class="card empty"><div class="card-title">字典 Dict</div><div class="card-sub">待更新</div></span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-title">
+      <span class="chapter-num">CHAPTER 03</span>
+      <span class="chapter-name">控制流</span>
+    </div>
+    <div class="card-grid">
+      <span class="card empty"><div class="card-title">条件语句</div><div class="card-sub">if / elif / else</div></span>
+      <span class="card empty"><div class="card-title">循环结构</div><div class="card-sub">for / while</div></span>
+    </div>
+  </div>
+
+  <div class="chapter">
+    <div class="chapter-title">
+      <span class="chapter-num">CHAPTER 04</span>
+      <span class="chapter-name">函数进阶</span>
+    </div>
+    <div class="card-grid">
+      <span class="card empty"><div class="card-title">作用域与闭包</div><div class="card-sub">待更新</div></span>
+      <span class="card empty"><div class="card-title">装饰器</div><div class="card-sub">待更新</div></span>
+    </div>
+  </div>
+
+  <footer>
+    用 markmap 整理 · GitHub Pages 托管<br>
+    <a href="https://github.com/jiaoziheng/python-mindmaps">GitHub 仓库</a>
+  </footer>
+</div>
+</body>
+</html>
