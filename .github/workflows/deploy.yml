@@ -1,0 +1,78 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install markmap
+        run: npm install -g markmap-cli
+
+      - name: Generate HTML from markdown
+        run: |
+          # 安装 markmap 生成模板
+          cat > generate.js << 'EOF'
+          const fs = require('fs');
+          const path = require('path');
+          const { execSync } = require('child_process');
+
+          function walkDir(dir, outDir) {
+            const files = fs.readdirSync(dir);
+            files.forEach(file => {
+              const fullPath = path.join(dir, file);
+              const stat = fs.statSync(fullPath);
+              if (stat.isDirectory()) {
+                const subOut = path.join(outDir, file);
+                fs.mkdirSync(subOut, { recursive: true });
+                walkDir(fullPath, subOut);
+              } else if (file.endsWith('.md')) {
+                const outPath = fullPath.replace(/src\//, 'docs/').replace(/\.md$/, '.html');
+                fs.mkdirSync(path.dirname(outPath), { recursive: true });
+                console.log('生成:', outPath);
+                try {
+                  execSync(`markmap "${fullPath}" -o "${outPath}"`, { stdio: 'inherit' });
+                } catch (e) {
+                  console.error('失败:', file);
+                }
+              }
+            });
+          }
+
+          walkDir('src', 'docs');
+          console.log('全部生成完毕');
+          EOF
+          node generate.js
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
