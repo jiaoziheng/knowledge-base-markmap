@@ -1,5 +1,9 @@
-# GitHub Pages 输出（由脚本自动生成）
-docs/
+# GitHub Pages 章节 HTML（由 scripts/build.sh 自动生成，不用提交）
+docs/chapters/
+docs/chapters
+
+# 封面页（手动编辑，请提交）
+docs/index.html
 
 # Node 缓存
 node_modules/
