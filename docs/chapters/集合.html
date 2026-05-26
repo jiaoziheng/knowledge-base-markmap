@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"Python &#x96c6;&#x5408; (Set)","children":[{"content":"&#x4e00;&#x3001;&#x96c6;&#x5408;&#x57fa;&#x7840;&#x6982;&#x5ff5;","children":[{"content":"&#x5b9a;&#x4e49;","children":[{"content":"&#x65e0;&#x5e8f;&#x7684;&#x4e0d;&#x91cd;&#x590d;&#x5143;&#x7d20;&#x5e8f;&#x5217;","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"0&#x4e2a;&#x6216;&#x591a;&#x4e2a;&#x5bf9;&#x8c61;&#x5f15;&#x7528;&#x7684;&#x65e0;&#x5e8f;&#x7ec4;&#x5408;","children":[],"payload":{"tag":"li","lines":"5,7"}}],"payload":{"tag":"h3","lines":"3,4"}},{"content":"&#x4e09;&#x5927;&#x7279;&#x70b9;","children":[{"content":"<strong>&#x4e0d;&#x540c;&#x5143;&#x7d20;&#x7ec4;&#x6210;</strong> &#x2014; &#x81ea;&#x52a8;&#x53bb;&#x91cd;","children":[],"payload":{"tag":"li","lines":"8,9"}},{"content":"<strong>&#x65e0;&#x5e8f;</strong> &#x2014; &#x6ca1;&#x6709;&#x7d22;&#x5f15;&#xff0c;&#x65e0;&#x6cd5;&#x4e0b;&#x6807;&#x8bbf;&#x95ee;","children":[],"payload":{"tag":"li","lines":"9,10"}},{"content":"<strong>&#x5143;&#x7d20;&#x5fc5;&#x987b;&#x662f;&#x4e0d;&#x53ef;&#x53d8;&#x7c7b;&#x578b;</strong> &#x2014; &#x6570;&#x5b57;/&#x5b57;&#x7b26;&#x4e32;/&#x5143;&#x7ec4;&#x53ef;&#xff0c;&#x5217;&#x8868;/&#x5b57;&#x5178;&#x4e0d;&#x53ef;","children":[],"payload":{"tag":"li","lines":"10,12"}}],"payload":{"tag":"h3","lines":"7,8"}},{"content":"&#x8868;&#x793a;&#x65b9;&#x5f0f;","children":[{"content":"&#x7528;&#x82b1;&#x62ec;&#x53f7; { } &#x62ec;&#x8d77;&#x6765;","children":[],"payload":{"tag":"li","lines":"13,15"}}],"payload":{"tag":"h3","lines":"12,13"}}],"payload":{"tag":"h2","lines":"2,3"}},{"content":"&#x4e8c;&#x3001;&#x96c6;&#x5408;&#x7684;&#x521b;&#x5efa;","children":[{"content":"&#x521b;&#x5efa;&#x7a7a;&#x96c6;","children":[{"content":"<code>set()</code> &#x2192; &#x521b;&#x5efa;&#x7a7a;&#x96c6;&#x5408;","children":[],"payload":{"tag":"li","lines":"19,20"}},{"content":"<code>{}</code> &#x2192; &#x521b;&#x5efa;&#x7684;&#x662f;&#x7a7a;&#x5b57;&#x5178;&#xff0c;<strong>&#x4e0d;&#x662f;&#x7a7a;&#x96c6;&#xff01;</strong>","children":[],"payload":{"tag":"li","lines":"20,22"}}],"payload":{"tag":"h3","lines":"18,19"}},{"content":"&#x4ece;&#x5b57;&#x7b26;&#x4e32;&#x521b;&#x5efa;","children":[{"content":"<pre data-lines=\"23,27\"><code class=\"language-python\">ss = <span class=\"hljs-built_in\">set</span>(<span class=\"hljs-string\">&apos;abcd&apos;</span>)\n<span class=\"hljs-comment\"># &#x7ed3;&#x679c;: {&apos;a&apos;, &apos;c&apos;, &apos;b&apos;, &apos;d&apos;}</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"23,27"}}],"payload":{"tag":"h3","lines":"22,23"}},{"content":"&#x4ece;&#x5217;&#x8868;&#x521b;&#x5efa;","children":[{"content":"<pre data-lines=\"29,33\"><code class=\"language-python\">ss1 = <span class=\"hljs-built_in\">set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>])\n<span class=\"hljs-comment\"># &#x7ed3;&#x679c;: {1, 2, 3}</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"29,33"}}],"payload":{"tag":"h3","lines":"28,29"}},{"content":"&#x81ea;&#x52a8;&#x53bb;&#x91cd;&#x7279;&#x6027;","children":[{"content":"<pre data-lines=\"35,39\"><code class=\"language-python\">ss2 = <span class=\"hljs-built_in\">set</span>([<span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">1</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">2</span>, <span class=\"hljs-number\">3</span>, <span class=\"hljs-number\">3</span>])\n<span class=\"hljs-comment\"># &#x7ed3;&#x679c;: {1, 2, 3}  &#x2190; &#x91cd;&#x590d;&#x5143;&#x7d20;&#x81ea;&#x52a8;&#x8fc7;&#x6ee4;</span>\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"35,39"}}],"payload":{"tag":"h3","lines":"34,35"}}],"payload":{"tag":"h2","lines":"17,18"}},{"content":"&#x4e09;&#x3001;&#x96c6;&#x5408;&#x64cd;&#x4f5c;","children":[{"content":"&#x6dfb;&#x52a0;&#x5143;&#x7d20;","children":[{"content":"<code>&#x96c6;&#x5408;.add(&#x5143;&#x7d20;)</code> &#x2014; &#x5355;&#x4e2a;&#x6dfb;&#x52a0;","children":[],"payload":{"tag":"li","lines":"44,45"}},{"content":"<code>&#x96c6;&#x5408;.update(&#x5e8f;&#x5217;)</code> &#x2014; &#x6279;&#x91cf;&#x6dfb;&#x52a0;","children":[],"payload":{"tag":"li","lines":"45,47"}}],"payload":{"tag":"h3","lines":"43,44"}},{"content":"&#x5220;&#x9664;&#x5143;&#x7d20;","children":[{"content":"<code>&#x96c6;&#x5408;.remove(&#x5143;&#x7d20;)</code> &#x2014; &#x5220;&#x9664;&#xff0c;&#x4e0d;&#x5b58;&#x5728;&#x5219;&#x62a5;&#x9519;","children":[],"payload":{"tag":"li","lines":"48,49"}},{"content":"<code>&#x96c6;&#x5408;.discard(&#x5143;&#x7d20;)</code> &#x2014; &#x5220;&#x9664;&#xff0c;&#x4e0d;&#x5b58;&#x5728;&#x4e0d;&#x62a5;&#x9519;","children":[],"payload":{"tag":"li","lines":"49,50"}},{"content":"<code>&#x96c6;&#x5408;.pop()</code> &#x2014; &#x968f;&#x673a;&#x5220;&#x9664;&#x4e00;&#x4e2a;","children":[],"payload":{"tag":"li","lines":"50,52"}}],"payload":{"tag":"h3","lines":"47,48"}}],"payload":{"tag":"h2","lines":"42,43"}},{"content":"&#x56db;&#x3001;&#x96c6;&#x5408;&#x8fd0;&#x7b97;","children":[{"content":"&#x56db;&#x4e2a;&#x57fa;&#x672c;&#x8fd0;&#x7b97;","children":[{"content":"<code>A | B</code> &#x2014; &#x5e76;&#x96c6;&#xff08;&#x5408;&#x5728;&#x4e00;&#x8d77;&#xff09;","children":[],"payload":{"tag":"li","lines":"56,57"}},{"content":"<code>A &amp; B</code> &#x2014; &#x4ea4;&#x96c6;&#xff08;&#x5171;&#x540c;&#x90e8;&#x5206;&#xff09;","children":[],"payload":{"tag":"li","lines":"57,58"}},{"content":"<code>A - B</code> &#x2014; &#x5dee;&#x96c6;&#xff08;A&#x6709;B&#x6ca1;&#x6709;&#xff09;","children":[],"payload":{"tag":"li","lines":"58,59"}},{"content":"<code>A ^ B</code> &#x2014; &#x5bf9;&#x79f0;&#x5dee;&#x96c6;&#xff08;&#x4e0d;&#x91cd;&#x590d;&#x7684;&#x90e8;&#x5206;&#xff09;","children":[],"payload":{"tag":"li","lines":"59,61"}}],"payload":{"tag":"h3","lines":"55,56"}}],"payload":{"tag":"h2","lines":"54,55"}},{"content":"&#x4e94;&#x3001;&#x96c6;&#x5408;&#x65b9;&#x6cd5;&#x901f;&#x67e5;","children":[{"content":"<table data-lines=\"64,76\">\n<thead data-lines=\"64,65\">\n<tr data-lines=\"64,65\">\n<th>&#x65b9;&#x6cd5;</th>\n<th>&#x4f5c;&#x7528;</th>\n</tr>\n</thead>\n<tbody data-lines=\"66,76\">\n<tr data-lines=\"66,67\">\n<td>add()</td>\n<td>&#x6dfb;&#x52a0;&#x5355;&#x4e2a;&#x5143;&#x7d20;</td>\n</tr>\n<tr data-lines=\"67,68\">\n<td>update()</td>\n<td>&#x6279;&#x91cf;&#x6dfb;&#x52a0;</td>\n</tr>\n<tr data-lines=\"68,69\">\n<td>remove()</td>\n<td>&#x5220;&#x9664;&#xff08;&#x4e0d;&#x5b58;&#x5728;&#x62a5;&#x9519;&#xff09;</td>\n</tr>\n<tr data-lines=\"69,70\">\n<td>discard()</td>\n<td>&#x5220;&#x9664;&#xff08;&#x4e0d;&#x5b58;&#x5728;&#x4e0d;&#x62a5;&#x9519;&#xff09;</td>\n</tr>\n<tr data-lines=\"70,71\">\n<td>pop()</td>\n<td>&#x968f;&#x673a;&#x5220;&#x9664;&#x4e00;&#x4e2a;</td>\n</tr>\n<tr data-lines=\"71,72\">\n<td>clear()</td>\n<td>&#x6e05;&#x7a7a;&#x96c6;&#x5408;</td>\n</tr>\n<tr data-lines=\"72,73\">\n<td>copy()</td>\n<td>&#x6d45;&#x62f7;&#x8d1d;</td>\n</tr>\n<tr data-lines=\"73,74\">\n<td>union()</td>\n<td>&#x5e76;&#x96c6;</td>\n</tr>\n<tr data-lines=\"74,75\">\n<td>intersection()</td>\n<td>&#x4ea4;&#x96c6;</td>\n</tr>\n<tr data-lines=\"75,76\">\n<td>difference()</td>\n<td>&#x5dee;&#x96c6;</td>\n</tr>\n</tbody>\n</table>","children":[],"payload":{"tag":"table","lines":"64,76"}}],"payload":{"tag":"h2","lines":"63,64"}},{"content":"&#x516d;&#x3001;&#x6613;&#x9519;&#x63d0;&#x9192;","children":[{"content":"<code>{}</code> &#x521b;&#x5efa;&#x7a7a;&#x5b57;&#x5178;&#xff0c;<code>set()</code> &#x521b;&#x5efa;&#x7a7a;&#x96c6;&#x5408;","children":[],"payload":{"tag":"li","lines":"80,81"}},{"content":"&#x96c6;&#x5408;&#x5143;&#x7d20;&#x5fc5;&#x987b;&#x4e0d;&#x53ef;&#x53d8;&#xff08;&#x6570;&#x5b57;/&#x5b57;&#x7b26;&#x4e32;/&#x5143;&#x7ec4;&#x53ef;&#xff0c;&#x5217;&#x8868;/&#x5b57;&#x5178;&#x4e0d;&#x53ef;&#xff09;","children":[],"payload":{"tag":"li","lines":"81,82"}},{"content":"&#x96c6;&#x5408;&#x53bb;&#x91cd;&#x662f;&#x81ea;&#x52a8;&#x7684;&#xff0c;&#x4f46;&#x4f1a;&#x6539;&#x53d8;&#x539f;&#x59cb;&#x987a;&#x5e8f;","children":[],"payload":{"tag":"li","lines":"82,83"}}],"payload":{"tag":"h2","lines":"79,80"}}],"payload":{"tag":"h1","lines":"0,1"}},null)</script>
+</body>
+</html>
