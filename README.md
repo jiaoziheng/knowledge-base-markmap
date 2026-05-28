@@ -1,6 +1,6 @@
-# 🗺️ Python 思维导图仓库
+# 🗂️ Knowledge Base - Markmap
 
-> 用 markmap 生成的可视化思维导图，按逻辑章节整理，持续更新。
+> 大学四年知识体系 · 按学科章节整理 · markmap 生成 · GitHub Pages 托管
 
 ## 📖 内容目录
 
@@ -19,31 +19,32 @@
 ### 生成导图 HTML
 
 ```bash
-# 方式一：全局安装 markmap
+# 安装 markmap
 npm i -g markmap-cli
-markmap src/01-Python基础/集合.md
 
-# 方式二：批量生成
+# 生成单章
+npx markmap src/01-Python基础/集合.md -o docs/chapters/集合.html
+
+# 批量生成
 bash scripts/build.sh
 ```
 
 ### 查看
 
-直接在浏览器打开生成的 `.html` 文件即可。
+直接在浏览器打开生成的 `.html` 文件，或访问 GitHub Pages 在线查看。
 
 ## 🌐 在线访问
 
-已配置 GitHub Pages，push 后自动部署到：
-> https://jiaoziheng.github.io/python-mindmaps
+> https://jiaoziheng.github.io/knowledge-base-markmap/docs/index.html
 
 ## 📝 添加新内容
 
 1. 在 `src/` 对应章节下新建 `.md` 文件
-2. 运行 `bash scripts/build.sh` 生成 HTML
-3. 提交到 GitHub，自动部署
+2. 运行生成命令转换为 HTML
+3. 提交到 GitHub，GitHub Pages 自动更新
 
 ## ⚙️ 技术栈
 
 - **生成工具**: [markmap](https://markmap.js.org)
 - **托管平台**: GitHub Pages
-- **自动化**: GitHub Actions
+- **版本管理**: Git + GitHub
